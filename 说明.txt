@@ -1,0 +1,31 @@
+nodejs 版本：13.14.0
+python版本：3.10.5
+两个不同的浏览器，edge，google
+
+*web 运行
+安装依赖
+cd chatClient
+npm install
+npm run dev
+注：修改以下文件内IP
+chatClient\config\dev.env.js
+chatClient\config\prod.env.js
+chatClient\config\index.js
+
+*server运行
+安装依赖
+cd chatServer
+pip install -r requirements.txt
+python app.py
+
+
+8env.py修改自己的数据库配置
+DB_DRIVER = os.getenv("DB_DRIVER", "mysql")
+# 数据库地址
+DB_HOST = os.getenv("DB_HOST", "127.0.0.1")
+# 数据库端口
+DB_PORT = os.getenv("DB_PORT", "3306")
+# 数据库名称
+DB_DATABASE = os.getenv("DB_DATABASE", "web_chat")
+# 数据库账号
+DB_USERNAME = os.getenv("DB_USERNAME", "xxxx")
